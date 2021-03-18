@@ -1,0 +1,17 @@
+* C:\Users\julit\Desktop\sem7\analogica\labs_ang1\lab3\lab3_1.asc
+D1 N003 N005 MyDiode
+V1 N003 0 5
+D2 N002 N003 MyDiode
+D3 N002 N004 MyDiode
+D4 N004 N005 MyDiode
+R1 N001 N002 10K
+R2 N005 P001 10K
+R3 0 N004 10k
+V2 P001 0 -10
+V3 N001 0 10
+.model D D
+.lib C:\Users\julit\Documents\LTspiceXVII\lib\cmp\standard.dio
+.model MyDiode D(Ron=1m Roff=100Meg Vfwd=0)
+.dc V1 -10 10 0.0001
+.backanno
+.end
